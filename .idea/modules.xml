@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/VolleyScoreKeeper.iml" filepath="$PROJECT_DIR$/VolleyScoreKeeper.iml" />
+      <module fileurl="file://C:\Users\Utente\AndroidStudioProjects\VolleyScoreKeeper\VolleyScoreKeeper.iml" filepath="C:\Users\Utente\AndroidStudioProjects\VolleyScoreKeeper\VolleyScoreKeeper.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Utente\AndroidStudioProjects\VolleyScoreKeeper\app\app.iml" filepath="C:\Users\Utente\AndroidStudioProjects\VolleyScoreKeeper\app\app.iml" />
     </modules>
   </component>
 </project>
