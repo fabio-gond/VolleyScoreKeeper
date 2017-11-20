@@ -94,18 +94,28 @@
 
     </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/bottom_section"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:background="#808080">
+        android:background="#808080"
+        android:orientation="vertical">
         <Button
-            android:text="Reset"
+            android:text="Reset Scores"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#000"
-            android:textColor="#fff"/>
-    </RelativeLayout>
+            android:textColor="#fff"
+            android:onClick="resetScores"
+            android:layout_marginBottom="15dp"/>
+        <Button
+            android:text="Reset Sets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000"
+            android:textColor="#fff"
+            android:onClick="resetSets"/>
+    </LinearLayout>
 
 </LinearLayout>
