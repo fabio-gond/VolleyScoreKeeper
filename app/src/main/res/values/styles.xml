@@ -12,9 +12,19 @@
         <item name="android:layout_height">50dp</item>
         <item name="android:layout_marginLeft">20dp</item>
         <item name="android:layout_marginRight">20dp</item>
-        <item name="android:background">@drawable/circle</item>
+        <item name="android:background">@drawable/set_btn</item>
         <item name="android:text">Set</item>
         <item name="android:textColor">#fff</item>
+        <item name="android:onClick">clickSet</item>
+    </style>
+    <style name="TeamScore">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:text">0</item>
+        <item name="android:textSize">70dp</item>
+        <item name="android:background">#fff</item>
+        <item name="android:onClick">increment</item>
     </style>
 
 </resources>
