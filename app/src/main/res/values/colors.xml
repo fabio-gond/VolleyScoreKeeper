@@ -3,8 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="colorALight">#FFC947</color>
-    <color name="colorADark">#FF9800</color>
-    <color name="colorBLight">#B0FF57</color>
-    <color name="colorBDark">#32CB00</color>
+    <color name="colorALight">#F50057</color>
+    <color name="colorADark">#F50057</color>
+    <color name="colorBLight">#00b0ff</color>
+    <color name="colorBDark">#00b0ff</color>
+    <color name="background">#000</color>
+    <color name="resetBg">#111</color>
 </resources>

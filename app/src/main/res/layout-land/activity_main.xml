@@ -6,48 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
+    android:background="@color/background"
     >
     <LinearLayout
         android:id="@+id/top_section"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="16dp"
-        android:background="#E6E6E6">
+        android:padding="16dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:gravity="center"
+            android:background="@color/colorALight"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btn_set3a"
+                style="@style/SetButtonV"/>
+            <Button
+                android:id="@+id/btn_set2a"
+                style="@style/SetButtonV"/>
+            <Button
+                android:id="@+id/btn_set1a"
+                style="@style/SetButtonV"/>
+
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/score_A_section"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_marginRight="10dp">
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp">
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/TeamName"
                 android:text="Team A"
-                android:gravity="center"
-                android:padding="15dp"
                 android:background="@color/colorALight"/>
             <Button
                 android:id="@+id/team_score_a"
                 style="@style/TeamScore"
                 android:textColor="@color/colorADark"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:gravity="center"
-                android:background="@color/colorALight">
-                <Button
-                    android:id="@+id/btn_set1a"
-                    style="@style/SetButton"/>
-                <Button
-                    android:id="@+id/btn_set2a"
-                    style="@style/SetButton"/>
-                <Button
-                    android:id="@+id/btn_set3a"
-                    style="@style/SetButton"/>
-            </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/score_B_section"
@@ -55,34 +55,33 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical"
+            android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp">
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/TeamName"
                 android:text="Team B"
-                android:gravity="center"
-                android:padding="15dp"
                 android:background="@color/colorBLight"/>
             <Button
                 android:id="@+id/team_score_b"
                 style="@style/TeamScore"
                 android:textColor="@color/colorBDark"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:gravity="center"
-                android:background="@color/colorBLight">
-                <Button
-                    android:id="@+id/btn_set1b"
-                    style="@style/SetButton"/>
-                <Button
-                    android:id="@+id/btn_set2b"
-                    style="@style/SetButton"/>
-                <Button
-                    android:id="@+id/btn_set3b"
-                    style="@style/SetButton"/>
-            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:gravity="center"
+            android:background="@color/colorBLight"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btn_set3b"
+                style="@style/SetButtonV"/>
+            <Button
+                android:id="@+id/btn_set2b"
+                style="@style/SetButtonV"/>
+            <Button
+                android:id="@+id/btn_set1b"
+                style="@style/SetButtonV"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -90,14 +89,13 @@
         android:id="@+id/bottom_section"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:background="#808080">
+        android:padding="16dp">
         <Button
             android:text="Reset Scores"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:background="#000"
+            android:background="@color/resetBg"
             android:textColor="#fff"
             android:onClick="resetScores"
             android:layout_marginLeft="15dp"
@@ -107,7 +105,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:background="#000"
+            android:background="@color/resetBg"
             android:textColor="#fff"
             android:onClick="resetSets"
             android:layout_marginLeft="15dp"

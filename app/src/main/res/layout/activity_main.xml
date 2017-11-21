@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
+    android:background="#000"
     >
     <LinearLayout
         android:id="@+id/top_section"
@@ -14,7 +15,7 @@
         android:layout_weight="1"
         android:orientation="vertical"
         android:padding="16dp"
-        android:background="#E6E6E6">
+        >
         <LinearLayout
             android:id="@+id/score_section"
             android:layout_width="match_parent"
@@ -27,11 +28,8 @@
                 android:orientation="vertical"
                 android:paddingRight="10dp">
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/TeamName"
                     android:text="Team A"
-                    android:gravity="center"
-                    android:padding="15dp"
                     android:background="@color/colorALight"/>
                 <Button
                     android:id="@+id/team_score_a"
@@ -45,11 +43,8 @@
                 android:orientation="vertical"
                 android:paddingLeft="10dp">
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/TeamName"
                     android:text="Team B"
-                    android:gravity="center"
-                    android:padding="15dp"
                     android:background="@color/colorBLight"/>
                 <Button
                     android:id="@+id/team_score_b"
@@ -66,13 +61,13 @@
             android:background="@color/colorALight">
             <Button
                 android:id="@+id/btn_set1a"
-                style="@style/SetButton"/>
+                style="@style/SetButtonH"/>
             <Button
                 android:id="@+id/btn_set2a"
-                style="@style/SetButton"/>
+                style="@style/SetButtonH"/>
             <Button
                 android:id="@+id/btn_set3a"
-                style="@style/SetButton"/>
+                style="@style/SetButtonH"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -82,13 +77,13 @@
             android:background="@color/colorBLight">
             <Button
                 android:id="@+id/btn_set1b"
-                style="@style/SetButton"/>
+                style="@style/SetButtonH"/>
             <Button
                 android:id="@+id/btn_set2b"
-                style="@style/SetButton"/>
+                style="@style/SetButtonH"/>
             <Button
                 android:id="@+id/btn_set3b"
-                style="@style/SetButton"/>
+                style="@style/SetButtonH"/>
         </LinearLayout>
 
 
@@ -99,13 +94,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:background="#808080"
         android:orientation="vertical">
         <Button
             android:text="Reset Scores"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#000"
+            android:background="#111"
             android:textColor="#fff"
             android:onClick="resetScores"
             android:layout_marginBottom="15dp"/>
@@ -113,7 +107,7 @@
             android:text="Reset Sets"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#000"
+            android:background="#111"
             android:textColor="#fff"
             android:onClick="resetSets"/>
     </LinearLayout>
