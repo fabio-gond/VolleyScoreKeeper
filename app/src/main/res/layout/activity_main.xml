@@ -96,18 +96,18 @@
         android:padding="16dp"
         android:orientation="vertical">
         <Button
-            android:text="Reset Scores"
+            android:text="@string/reset_scores"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#111"
+            android:background="@color/resetBg"
             android:textColor="#fff"
             android:onClick="resetScores"
             android:layout_marginBottom="15dp"/>
         <Button
-            android:text="Reset Sets"
+            android:text="@string/reset_sets"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#111"
+            android:background="@color/resetBg"
             android:textColor="#fff"
             android:onClick="resetSets"/>
     </LinearLayout>

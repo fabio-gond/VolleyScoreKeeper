@@ -8,5 +8,5 @@
     <color name="colorBLight">#00b0ff</color>
     <color name="colorBDark">#00b0ff</color>
     <color name="background">#000</color>
-    <color name="resetBg">#111</color>
+    <color name="resetBg">#222</color>
 </resources>

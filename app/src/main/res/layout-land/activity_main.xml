@@ -91,7 +91,7 @@
         android:layout_height="wrap_content"
         android:padding="16dp">
         <Button
-            android:text="Reset Scores"
+            android:text="@string/reset_scores"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -101,7 +101,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"/>
         <Button
-            android:text="Reset Sets"
+            android:text="@string/reset_sets"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">VolleyScoreKeeper</string>
+    <string name="reset_scores">Reset Scores</string>
+    <string name="reset_sets">Reset Sets</string>
 </resources>
