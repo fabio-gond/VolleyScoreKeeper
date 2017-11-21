@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
     int scoreB=0;
     int setsA =0;
     int setsB=0;
+    boolean needReset=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,16 +81,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*
-        Increment Team Score
+        Increment Team Score on tap
      */
     public void increment(View view){
-        Button btnScore=findViewById(view.getId());
-        if(view.getId()==R.id.team_score_a){
-            scoreA++;
-            btnScore.setText(String.valueOf(scoreA));
-        }else{
-            scoreB++;
-            btnScore.setText(String.valueOf(scoreB));
+        if(needReset){
+            resetScores();
+            needReset=false;
+        }else {
+            Button btnScore = findViewById(view.getId());
+            if (view.getId() == R.id.team_score_a) {
+                scoreA++;
+                btnScore.setText(String.valueOf(scoreA));
+            } else {
+                scoreB++;
+                btnScore.setText(String.valueOf(scoreB));
+            }
+            checkWin();
         }
     }
 
@@ -97,6 +104,14 @@ public class MainActivity extends AppCompatActivity {
     Reset Team Scores but not the set scores
      */
     public void resetScores(View view){
+        scoreA=0;
+        scoreB=0;
+        Button btnScore=findViewById(R.id.team_score_a);
+        btnScore.setText("0");
+        btnScore=findViewById(R.id.team_score_b);
+        btnScore.setText("0");
+    }
+    private void resetScores(){
         scoreA=0;
         scoreB=0;
         Button btnScore=findViewById(R.id.team_score_a);
@@ -123,4 +138,27 @@ public class MainActivity extends AppCompatActivity {
         // Always call the superclass so it can save the view hierarchy state
         super.onSaveInstanceState(savedInstanceState);
     }
+
+    /* Check if a team wins a set or the match */
+    private void checkWin(){
+        char winner=' ';
+        if (scoreA>=25){
+            if ((scoreA-scoreB)>1){
+                winner='A';
+            }
+        }
+        if (scoreB>=25){
+            if ((scoreB-scoreA)>1){
+                winner='B';
+            }
+        }
+        if ((winner=='A') && (setsA<3)){
+            setSets(winner,setsA+1);
+            needReset=true;
+        }else if ((winner=='B') && (setsB<3)){
+            setSets(winner,setsB+1);
+            needReset=true;
+        }
+    }
+
 }
