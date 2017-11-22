@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical"
     android:background="@color/background"
     >
     <LinearLayout
         android:id="@+id/top_section"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="16dp">
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_above="@+id/bottom_section">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -32,40 +31,42 @@
                 style="@style/SetButtonV"/>
 
         </LinearLayout>
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/score_A_section"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp">
             <TextView
+                android:id="@+id/team_name_a"
                 style="@style/TeamName"
                 android:text="Team A"
                 android:background="@color/colorALight"/>
             <Button
                 android:id="@+id/team_score_a"
                 style="@style/TeamScore"
+                android:layout_below="@+id/team_name_a"
                 android:textColor="@color/colorADark"/>
-        </LinearLayout>
-        <LinearLayout
+        </RelativeLayout>
+        <RelativeLayout
             android:id="@+id/score_B_section"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp">
             <TextView
+                android:id="@+id/team_name_b"
                 style="@style/TeamName"
                 android:text="Team B"
                 android:background="@color/colorBLight"/>
             <Button
                 android:id="@+id/team_score_b"
                 style="@style/TeamScore"
+                android:layout_below="@+id/team_name_b"
                 android:textColor="@color/colorBDark"/>
-        </LinearLayout>
+        </RelativeLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -89,7 +90,8 @@
         android:id="@+id/bottom_section"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:layout_alignParentBottom="true">
         <Button
             android:text="@string/reset_scores"
             android:layout_width="0dp"
@@ -112,4 +114,4 @@
             android:layout_marginRight="15dp"/>
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
