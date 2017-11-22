@@ -10,7 +10,8 @@ public class MainActivity extends AppCompatActivity {
     int scoreB=0;
     int setsA =0;
     int setsB=0;
-    boolean needReset=false;
+    boolean needReset=false; // When a Team wins a set
+    boolean needTotalReset=false; // When a Team wins the match
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,9 +85,14 @@ public class MainActivity extends AppCompatActivity {
         Increment Team Score on tap
      */
     public void increment(View view){
-        if(needReset){
+        if((needReset) || (needTotalReset)){
             resetScores();
             needReset=false;
+            if(needTotalReset){
+                setSets('A',0);
+                setSets('B',0);
+                needTotalReset=false;
+            }
         }else {
             Button btnScore = findViewById(view.getId());
             if (view.getId() == R.id.team_score_a) {
@@ -152,12 +158,18 @@ public class MainActivity extends AppCompatActivity {
                 winner='B';
             }
         }
-        if ((winner=='A') && (setsA<3)){
+        if ((winner=='A') && (setsA<2)){
             setSets(winner,setsA+1);
             needReset=true;
-        }else if ((winner=='B') && (setsB<3)){
+        }else if ((winner=='B') && (setsB<2)){
             setSets(winner,setsB+1);
             needReset=true;
+        }else if (winner=='A'){
+            setSets(winner,setsA+1);
+            needTotalReset=true;
+        }else if (winner=='B'){
+            setSets(winner,setsB+1);
+            needTotalReset=true;
         }
     }
 
