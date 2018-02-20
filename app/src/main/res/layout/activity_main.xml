@@ -4,88 +4,101 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#000"
-    >
+    android:background="@color/main_background"
+    tools:context=".MainActivity">
+
     <LinearLayout
         android:id="@+id/top_section"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp"
         android:layout_above="@+id/bottom_section"
-        >
+        android:orientation="vertical"
+        android:padding="@dimen/main_borderPadding">
+
         <LinearLayout
             android:id="@+id/score_section"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            >
+            android:layout_weight="1">
+
             <RelativeLayout
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:paddingRight="10dp">
+
                 <TextView
                     android:id="@+id/team_name_a"
                     style="@style/TeamName"
-                    android:text="Team A"
-                    android:background="@color/colorALight"/>
+                    android:background="@color/colorALight"
+                    android:text="@string/main_teamA" />
+
                 <Button
                     android:id="@+id/team_score_a"
-                    android:textColor="@color/colorADark"
+                    style="@style/TeamScore"
                     android:layout_below="@+id/team_name_a"
-                    style="@style/TeamScore"/>
+                    android:textColor="@color/colorADark" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:paddingLeft="10dp">
+
                 <TextView
                     android:id="@+id/team_name_b"
                     style="@style/TeamName"
-                    android:text="Team B"
-                    android:background="@color/colorBLight"/>
+                    android:background="@color/colorBLight"
+                    android:text="@string/main_teamB" />
+
                 <Button
                     android:id="@+id/team_score_b"
                     style="@style/TeamScore"
                     android:layout_below="@+id/team_name_b"
-                    android:textColor="@color/colorBDark"/>
+                    android:textColor="@color/colorBDark" />
             </RelativeLayout>
         </LinearLayout>
+
         <LinearLayout
-            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="15dp"
+            android:layout_marginTop="@dimen/main_smallMargin"
+            android:background="@color/colorALight"
             android:gravity="center"
-            android:background="@color/colorALight">
+            android:padding="@dimen/main_setBoxPadding">
+
             <Button
                 android:id="@+id/btn_set1a"
-                style="@style/SetButtonH"/>
+                style="@style/SetButtonH" />
+
             <Button
                 android:id="@+id/btn_set2a"
-                style="@style/SetButtonH"/>
+                style="@style/SetButtonH" />
+
             <Button
                 android:id="@+id/btn_set3a"
-                style="@style/SetButtonH"/>
+                style="@style/SetButtonH" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="15dp"
+            android:background="@color/colorBLight"
             android:gravity="center"
-            android:background="@color/colorBLight">
+            android:padding="@dimen/main_setBoxPadding">
+
             <Button
                 android:id="@+id/btn_set1b"
-                style="@style/SetButtonH"/>
+                style="@style/SetButtonH" />
+
             <Button
                 android:id="@+id/btn_set2b"
-                style="@style/SetButtonH"/>
+                style="@style/SetButtonH" />
+
             <Button
                 android:id="@+id/btn_set3b"
-                style="@style/SetButtonH"/>
+                style="@style/SetButtonH" />
         </LinearLayout>
 
 
@@ -95,24 +108,26 @@
         android:id="@+id/bottom_section"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:layout_alignParentBottom="true"
         android:orientation="vertical"
-        android:layout_alignParentBottom="true">
+        android:padding="@dimen/main_borderPadding">
+
         <Button
-            android:text="@string/reset_scores"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/main_smallMargin"
             android:background="@color/resetBg"
-            android:textColor="#fff"
             android:onClick="resetScores"
-            android:layout_marginBottom="15dp"/>
+            android:text="@string/reset_scores"
+            android:textColor="@color/buttonsText" />
+
         <Button
-            android:text="@string/reset_sets"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/resetBg"
-            android:textColor="#fff"
-            android:onClick="resetSets"/>
+            android:onClick="resetSets"
+            android:text="@string/reset_sets"
+            android:textColor="@color/buttonsText" />
     </LinearLayout>
 
 </RelativeLayout>

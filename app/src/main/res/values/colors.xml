@@ -9,4 +9,6 @@
     <color name="colorBDark">#00b0ff</color>
     <color name="background">#000</color>
     <color name="resetBg">#222</color>
+    <color name="main_background">#000</color>
+    <color name="buttonsText">#fff</color>
 </resources>
